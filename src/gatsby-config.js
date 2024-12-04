@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  assetPrefix: process.env.ASSET_PREFIX,
+  assetPrefix: 'https://cdn.staging.oregon.platform-os.com/instances/11963/assets/',
   siteMetadata: {
     title: 'DocsKit Starter',
     description: 'Open-source Docs as Code documentation solution leveraging platformOS, a git workflow, and a static site generator',

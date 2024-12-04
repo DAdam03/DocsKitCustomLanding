@@ -1,0 +1,6 @@
+footer{
+    height: 100px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-top: 2px solid rgb(182, 211, 169);
+}
