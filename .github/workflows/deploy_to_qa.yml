@@ -27,21 +27,29 @@ jobs:
       - name: Set up Node.js and Yarn
         uses: actions/setup-node@v3
         with:
-          node-version: 18
-          registry-url: https://registry.yarnpkg.com
+          node-version: 20.11.1
 
       - name: Install Dependencies
-        run: yarn install --cwd src
-
-      - name: Build
         run: |
           cd src
+          npm install --legacy-peer-deps
+
+      - name: pos-cli
+        shell: sh
+        run: |
+          npm install -g @platformos/pos-cli
+
+      - name: Build
+        shell: sh
+        run: |
+          set -eu
+          echo $MPKIT_URL
+          npm ci
           npm run build
 
       - name: Deploy
         timeout-minutes: 10
         shell: sh
         run: |
-          set -e
-          npm -g install @platformos/pos-cli
+          set -eu
           pos-cli deploy
