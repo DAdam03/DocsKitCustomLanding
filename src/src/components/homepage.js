@@ -1,5 +1,6 @@
 import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
+import { Script } from 'gatsby'
+
 import Grid from '@platformos/gatsby-theme-platformos-docskit/src/components/grid'
 import Button from '@platformos/gatsby-theme-platformos-docskit/src/components/button'
 import Card from '@platformos/gatsby-theme-platformos-docskit/src/components/card'
@@ -7,10 +8,11 @@ import HeroImage from './heroimage'
 
 import './homepage.css'
 
-
+//<Script src="../scripts/mousewheel_event.js"/>
 
 const HomePage = () => (
     <div>
+        
 
         <HeroImage>ASDASDASD</HeroImage>
         <h1>VALAMI PAGE</h1>
